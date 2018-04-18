@@ -1,0 +1,34 @@
+<ion-menu [content]="NAV">
+        <ion-header>
+                <ion-navbar>
+              
+                  <button ion-button menuToggle>
+                    <ion-icon name="menu"></ion-icon>
+                  </button>
+                  <ion-title>Menu</ion-title>
+                </ion-navbar>
+              </ion-header>
+
+    <ion-content><!-- para agregar contenido scrolable-->
+        <ion-list menuClose> <!--Hace que se cierre el menu despues de oprimir un boton-->
+            <button ion-item (click)="irPerfil()"> <!--Funcion para ir a la page Perfil-->
+                <ion-icon item-left name="md-person"></ion-icon>
+               Perfil
+            </button>
+            <button ion-item (click)="irChat()">
+                <ion-icon item-left name="md-chatbubbles"></ion-icon>
+                Chat
+            </button>
+            <button ion-item > <!--Funcion para ir a la page Perfil-->
+                <ion-icon item-left name="md-paw"></ion-icon>
+               Mascotas
+            </button>
+            <button ion-item>
+                <ion-icon item-left name="md-exit"></ion-icon>
+                Cerrar sesión
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav #NAV [root]="rootPage"></ion-nav>
